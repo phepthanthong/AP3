@@ -6,6 +6,8 @@
 #include "Fou.h"
 #include "Pion.h"
 #include "Cavalier.h"
+#include "Roi.h"
+#include "Reine.h"
 using namespace std;
 
 class Joueur {
@@ -17,6 +19,8 @@ class Joueur {
   Fou f[2];
   Cavalier c[2];
   Pion p[8];
+  Roi roi;
+  Reine re;
   //Piece _tab[16];
 
  public:

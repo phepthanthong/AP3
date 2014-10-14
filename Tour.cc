@@ -1,12 +1,12 @@
 #include "Tour.h"
 
 Tour::Tour(){
-  cout << "Constructeur par defaut: Tour" << endl;
+  //cout << "Constructeur par defaut: Tour" << endl;
   //_nom = "T";
 }
 
 Tour::~Tour(){
-  cout << "Destructeur: Tour" << endl;
+  //cout << "Destructeur: Tour" << endl;
 }
 
 bool Tour::mouvementValide(Echiquier &e, int x, int y){

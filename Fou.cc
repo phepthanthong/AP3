@@ -1,11 +1,11 @@
 #include "Fou.h"
 
 Fou::Fou(){
-  cout << "Constructeur par defaut: Fou" << endl;
+  //cout << "Constructeur par defaut: Fou" << endl;
 }
 
 Fou::~Fou(){
-  cout << "Destructeur Fou" << endl;
+  //cout << "Destructeur Fou" << endl;
 }
 
 /*bool Fou::mouvementValide(Echiquier &e, int x, int y){

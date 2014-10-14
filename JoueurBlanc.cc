@@ -1,18 +1,17 @@
 #include "JoueurBlanc.h"
-//#include "Tour.h"
+
 JoueurBlanc::JoueurBlanc(Echiquier &e){
-  cout << "Constructeur par defaut: JoueurBlanc" << endl;
-  /*
-  e.m_cases[56]=&t[0];
-  t[0].setNom("T");
-  t[0].setX(0);
-  t[0].setY(7);
-  cout << t[0].getNom() << endl;
-  cout << e.m_cases[0]->getNom();
-  e.m_cases[63]=&t[1];
-  t[1].setNom("T");
-  t[1].setX(7);
-  t[1].setY(7);*/
+  //cout << "Constructeur par defaut: JoueurBlanc" << endl;
+  
+  e.m_cases[59]=&roi;
+  roi.setNom("R");
+  roi.setX(3);
+  roi.setY(7);
+  
+  e.m_cases[60]=&re;
+  re.setNom("Q");
+  re.setX(4);
+  re.setY(7);
 
   for (int i = 0; i<2; i++){
     e.m_cases[56+i*7]=&t[i];
@@ -41,7 +40,7 @@ JoueurBlanc::JoueurBlanc(Echiquier &e){
 }
 
 JoueurBlanc::~JoueurBlanc(){
-  cout << "Destructeur: JoueurBlanc" << endl;
+  //cout << "Destructeur: JoueurBlanc" << endl;
 }
 
 JoueurBlanc::JoueurBlanc(string nom) : Joueur(nom,true){

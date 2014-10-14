@@ -16,8 +16,8 @@ bool comparerPiece(Piece &p1,Piece &p2){
 int main(){
   Echiquier e;
   e.affiche();
-  JoueurBlanc o(e);
-  e.affiche();
-  //o.infoJoueur();
+  JoueurNoir o(e);
+  JoueurBlanc k(e);
+  e.affiche(); 
   
 }
