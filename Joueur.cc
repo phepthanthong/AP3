@@ -2,7 +2,7 @@
 int Joueur::comp = 0;
 Joueur::Joueur(){
   cout << "Constructeur par defaut: Joueur" << endl;
-
+  /*
   if (comp = 0)
     {
       _estBlanc = true;
@@ -60,8 +60,9 @@ Joueur::Joueur(){
 	}
     }      
   comp++;
+  */
 }
-
+  
 Joueur::~Joueur(){
   cout << "Destructeur: Joueur" << endl;
 }
@@ -85,9 +86,9 @@ void Joueur::infoJoueur(){
     cout << "Couleur : Blanc " << endl;
   else if ( !_estBlanc )
     cout << "Couleur : Noir " << endl;
-  for (int i = 0; i<16; i++)
+  /*for (int i = 0; i<16; i++)
     {
       cout << "numero: " << i << endl;
       _tab[i].infoPiece();
-    }
+      }*/
 }

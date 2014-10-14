@@ -2,7 +2,7 @@
 
 Tour::Tour(){
   cout << "Constructeur par defaut: Tour" << endl;
-  _nom = "T";
+  //_nom = "T";
 }
 
 Tour::~Tour(){

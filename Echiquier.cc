@@ -20,7 +20,7 @@ Echiquier::Echiquier()
   for (int a = 0; a<64; a++)
     m_cases[a] = new Piece;
 
-  for (int i = 0; i<8; i++){
+  /*for (int i = 0; i<8; i++){
     for (int j = 0; j<8; j++){
       m_cases[j+i*8]->setX(j);
       m_cases[j+i*8]->setY(i);
@@ -29,7 +29,7 @@ Echiquier::Echiquier()
       else
 	m_cases[j+i*8]->setCouleur(false);
     }
-  }
+    }*/
 }
 
 
@@ -44,10 +44,10 @@ Echiquier::Echiquier()
  */
 Piece* Echiquier::getPiece( int x, int y )
 {
-  for (int i = 0; i<64; i++)
-    if ( (m_cases[i]->getX()==x) && (m_cases[i]->getY() == y))
-      return m_cases[i];
-  return 0;
+  if ( (m_cases[x+y*8]->getX()==x) && (m_cases[x+y*8]->getY() == y))	    return m_cases[x+y*8];    
+  else
+    return 0; 
+ 
 }
 
   
@@ -114,24 +114,23 @@ Piece* Echiquier::enleverPiece( int x, int y )
  */
  void Echiquier::affiche()
  {
-   cout << endl << "  12345678" << endl;
+   cout << endl << "   1 2 3 4 5 6 7 8" << endl;
    for ( int y = 0; y < 8; ++y )
      {
        cout << y+1 << " ";
        for ( int x = 0; x < 8; ++x )
 	 {
-	  char c;
+	  string c;
 	  Piece* p = getPiece( x, y );
 	  
-	  if ( p == 0 && getPiece(y,x)->getNom() == "" ) 
-	    c = ( ( x + y ) % 2 ) == 0 ? '#' : '.';
-	  else if ( p == 0 && getPiece(y,x)->getNom() != "" )
-	    c = getPiece(y,x)->getNom()[0];
-	    c = p->isWhite() ? 'B' : 'N';
-	  cout << c;
+	  if ( p == 0  ) 
+	    c = ( ( x + y ) % 2 ) == 0 ? "#" : ".";
+	  else 
+	    c = p->getNom();
+	  cout <<" " << c;
 	 }
-       cout << " " << y+1 << endl;
+       cout << "  " << y+1 << endl;
      }
-   cout << "  87654321" << endl;
+   cout << "   8 7 6 5 4 3 2 1" << endl;
  }
    

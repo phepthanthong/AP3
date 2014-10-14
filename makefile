@@ -1,6 +1,6 @@
 CC=g++
-DEPS=Joueur.h Piece.h JoueurNoir.h JoueurBlanc.h Echiquier.h Tour.h
-OBJ=Joueur.o Piece.o mainJ.o JoueurNoir.o JoueurBlanc.o Echiquier.o Tour.o
+DEPS=Joueur.h Piece.h  JoueurBlanc.h Echiquier.h Tour.h Cavalier.h Fou.h Pion.h
+OBJ=Joueur.o Piece.o mainJ.o  JoueurBlanc.o Echiquier.o Tour.o Cavalier.o Fou.o Pion.o
 EXE=main
 
 $(EXE): $(OBJ)

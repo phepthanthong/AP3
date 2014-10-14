@@ -7,3 +7,6 @@ Pion::Pion(){
 Pion::~Pion(){
   cout << "Destructeur Pion" << endl;
 }
+
+bool Pion::mouvementValide(Echiquier &e, int x, int y){
+}

@@ -4,7 +4,7 @@
 #include "Piece.h"
 #include "Echiquier.h"
 
-using namcespace std;
+using namespace std;
 
 class Fou : public Piece {
  private:
@@ -13,7 +13,7 @@ class Fou : public Piece {
   Fou();
   ~Fou();
 
-  virtual bool mouvementValide(Echiquier &e, int x, int y);
+  //virtual bool mouvementValide(Echiquier &e, int x, int y);
 
 };
 

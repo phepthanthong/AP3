@@ -14,14 +14,10 @@ bool comparerPiece(Piece &p1,Piece &p2){
 }
 
 int main(){
-  //Joueur j;
-  //Joueur k("HIEU",true);
-  //JoueurNoir n("Loc");
-  JoueurBlanc o("Long");
-  //j.infoJoueur();
-  //k.infoJoueur();
-  //n.infoJoueur();
-  o.infoJoueur();
   Echiquier e;
   e.affiche();
+  JoueurBlanc o(e);
+  e.affiche();
+  //o.infoJoueur();
+  
 }

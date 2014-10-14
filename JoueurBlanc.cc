@@ -1,11 +1,43 @@
 #include "JoueurBlanc.h"
-#include "Tour.h"
+//#include "Tour.h"
 JoueurBlanc::JoueurBlanc(Echiquier &e){
   cout << "Constructeur par defaut: JoueurBlanc" << endl;
-  e.tab[0]=&t[0];
-  t[0].setNom("Tb");
-  e.tab[7]=&t[1];
+  /*
+  e.m_cases[56]=&t[0];
+  t[0].setNom("T");
+  t[0].setX(0);
+  t[0].setY(7);
+  cout << t[0].getNom() << endl;
+  cout << e.m_cases[0]->getNom();
+  e.m_cases[63]=&t[1];
+  t[1].setNom("T");
+  t[1].setX(7);
+  t[1].setY(7);*/
 
+  for (int i = 0; i<2; i++){
+    e.m_cases[56+i*7]=&t[i];
+    e.m_cases[57+i*5]=&c[i];
+    e.m_cases[58+i*3]=&f[i];
+
+    t[i].setX(i*7);
+    t[i].setY(7);
+    c[i].setX(i*5+1);
+    c[i].setY(7);
+    f[i].setX(i*3+2);
+    f[i].setY(7);
+
+    t[i].setNom("T");
+    c[i].setNom("C");
+    f[i].setNom("F");
+  }
+
+  for (int i = 0; i<8; i++){
+    e.m_cases[48+i]=&p[i];
+
+    p[i].setX(i);
+    p[i].setY(6);
+    p[i].setNom("P");
+  }
 }
 
 JoueurBlanc::~JoueurBlanc(){
@@ -14,7 +46,7 @@ JoueurBlanc::~JoueurBlanc(){
 
 JoueurBlanc::JoueurBlanc(string nom) : Joueur(nom,true){
   cout << "Constructeur avec parametre: JoueurBlanc" << endl;
-for (int a = 0; a<16; a++)
+  /*for (int a = 0; a<16; a++)
 	{
 	  if (a<8)
 	    {
@@ -37,5 +69,5 @@ for (int a = 0; a<16; a++)
 	      else if (a == 12)
 		_tab[a].setNom("Hasu");
 	    }
-	}
+	    }*/
 }

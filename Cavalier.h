@@ -1,18 +1,19 @@
-#ifndef PION_H
-#define PION_H
+#ifndef CAVALIER_H
+#define CAVALIER_H
 #include "Piece.h"
 #include "Echiquier.h"
 
 using namespace std;
 
-class Pion : public Piece {
+class Cavalier : public Piece {
  private:
 
  public:
-  Pion();
-  ~Pion();
+  Cavalier();
+  ~Cavalier();
 
   virtual bool mouvementValide(Echiquier &e, int x, int y);
+
 };
 
-#endif  
+#endif
