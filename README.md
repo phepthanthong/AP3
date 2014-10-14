@@ -1,4 +1,0 @@
-AP3
-===
-
-Programmation
