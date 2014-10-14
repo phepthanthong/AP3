@@ -1,16 +1,16 @@
 #include <iostream>
 #include "Piece.h"
+
 using namespace std;
 
-int main()
-{
+int main(){
   Piece p;
-  Piece ce(2,1,"le roi");
-  ce.nomDePiece();
-  ce.setX(10);
-  ce.setY(5);
-  cout << ce.getX() << endl;
-  cout << ce.getY() << endl;
+  Piece n(2, 1, "ROI");
+  n.infoPiece();
+  n.setX(10);
+  n.setY(5);
+  cout << n.getX() << endl;
+  cout << n.getY() << endl;
 
   Piece pi[4];
 }

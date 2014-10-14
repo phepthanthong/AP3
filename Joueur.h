@@ -1,16 +1,24 @@
+#ifndef JOUEUR_H
+#define JOUEUR_H
 #include <iostream>
 #include "Piece.h"
+
 using namespace std;
 
 class Joueur {
- private:
+
+  //private:
+ protected:
   string _nom;
-  string _couleur;
-  Piece tab[16];
+  bool _estBlanc;
+  Tour t[2];
+  //Piece _tab[16];
+
  public:
-  static int comp = 0;
+  static int comp;
   Joueur();
   ~Joueur();
-  Joueur(string nom, string couleur);
- 
+  Joueur(string nom, bool estBlanc);
+  void infoJoueur();
 };
+#endif
