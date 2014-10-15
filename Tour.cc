@@ -10,11 +10,5 @@ Tour::~Tour(){
 }
 
 bool Tour::mouvementValide(Echiquier &e, int x, int y){
-  /*if ( e.getPiece(_x,_y).getX() == _x &&
-       e.getPiece(_x,_y).getY() == _y && 
-       getX() == x && getY() == y )*/
-
-  if ( this->getX() == x && this->getY() == y )
-    return true;
-  else return false;
+  return ( abs(this->getX()-x) > 1 && abs(this->getY()-y) == 0 || abs(this->getX()-x) == 0 && abs(this->getY()-y) > 1 );
 }

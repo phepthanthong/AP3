@@ -2,10 +2,11 @@
 #define TOUR_H
 #include "Piece.h"
 #include "Echiquier.h"
+#include <cmath>
 
 using namespace std;
 
-class Tour: public Piece {
+class Tour: virtual public Piece {
  private:
 
  public:

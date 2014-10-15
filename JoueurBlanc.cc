@@ -2,16 +2,18 @@
 
 JoueurBlanc::JoueurBlanc(Echiquier &e){
   //cout << "Constructeur par defaut: JoueurBlanc" << endl;
-  
+ 
   e.m_cases[59]=&roi;
   roi.setNom("R");
   roi.setX(3);
   roi.setY(7);
+  roi.setCouleur(true);
   
   e.m_cases[60]=&re;
-  re.setNom("Q");
+  re.setNom("D");
   re.setX(4);
   re.setY(7);
+  re.setCouleur(true);
 
   for (int i = 0; i<2; i++){
     e.m_cases[56+i*7]=&t[i];
@@ -20,10 +22,13 @@ JoueurBlanc::JoueurBlanc(Echiquier &e){
 
     t[i].setX(i*7);
     t[i].setY(7);
+    t[i].setCouleur(true);
     c[i].setX(i*5+1);
     c[i].setY(7);
+    c[i].setCouleur(true);
     f[i].setX(i*3+2);
     f[i].setY(7);
+    f[i].setCouleur(true);
 
     t[i].setNom("T");
     c[i].setNom("C");
@@ -36,6 +41,7 @@ JoueurBlanc::JoueurBlanc(Echiquier &e){
     p[i].setX(i);
     p[i].setY(6);
     p[i].setNom("P");
+    p[i].setCouleur(true);
   }
 }
 

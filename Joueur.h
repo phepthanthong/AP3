@@ -11,7 +11,7 @@
 using namespace std;
 
 class Joueur {
-  
+ 
  protected:
   string _nom;
   bool _estBlanc;

@@ -7,11 +7,13 @@ JoueurNoir::JoueurNoir(Echiquier &e){
   roi.setNom("r");
   roi.setX(3);
   roi.setY(0);
+  roi.setCouleur(false);
   
   e.m_cases[4]=&re;
-  re.setNom("q");
+  re.setNom("d");
   re.setX(4);
   re.setY(0);
+  re.setCouleur(false);
   
   for (int i = 0; i<2; i++){
     e.m_cases[0+i*7]=&t[i];
@@ -20,10 +22,13 @@ JoueurNoir::JoueurNoir(Echiquier &e){
     
     t[i].setX(i*7);
     t[i].setY(0);
+    t[i].setCouleur(false);
     c[i].setX(i*5+1);
     c[i].setY(0);
+    c[i].setCouleur(false);
     f[i].setX(i*3+2);
     f[i].setY(0);
+    f[i].setCouleur(false);
     
     t[i].setNom("t");
     c[i].setNom("t");
@@ -36,6 +41,7 @@ JoueurNoir::JoueurNoir(Echiquier &e){
     p[i].setX(i);
     p[i].setY(1);
     p[i].setNom("p");
+    p[i].setCouleur(false);
   }
 }
 

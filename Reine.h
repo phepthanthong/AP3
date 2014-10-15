@@ -2,10 +2,13 @@
 #define REINE_H
 #include "Piece.h"
 #include "Echiquier.h"
+#include "Tour.h"
+#include "Fou.h"
+#include <cmath>
 
 using namespace std;
 
-class Reine: public Piece {
+class Reine: public Tour, public Fou {
  private:
 
  public:

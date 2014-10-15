@@ -2,6 +2,7 @@
 #define PION_H
 #include "Piece.h"
 #include "Echiquier.h"
+#include <cmath>
 
 using namespace std;
 
