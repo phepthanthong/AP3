@@ -104,6 +104,16 @@ bool Echiquier::deplacer( Piece* p, int x, int y )
  */
 Piece* Echiquier::enleverPiece( int x, int y )
 {
+  if ( ( x >= 1 ) && ( x <= 8 )
+       && ( y >= 1 ) && ( y <= 8 )
+       && ( getPiece( x, y ) != 0 ) )
+    {
+      //Piece *tmp;
+      //tmp=m_cases[x - 1][y - 1];
+      //m_cases[x - 1][y - 1] = NULL;  //pas 0 plutot?
+      //  return tmp;
+    }
+  return NULL;
 }
 
 
@@ -114,10 +124,10 @@ Piece* Echiquier::enleverPiece( int x, int y )
  */
  void Echiquier::affiche()
  {
-   cout << endl << "   1 2 3 4 5 6 7 8" << endl;
+   cout << endl << "   0 1 2 3 4 5 6 7" << endl;
    for ( int y = 0; y < 8; ++y )
      {
-       cout << y+1 << " ";
+       cout << y << " ";
        for ( int x = 0; x < 8; ++x )
 	 {
 	  string c;
@@ -129,8 +139,8 @@ Piece* Echiquier::enleverPiece( int x, int y )
 	    c = p->getNom();
 	  cout <<" " << c;
 	 }
-       cout << "  " << y+1 << endl;
+       cout << "  " << y << endl;
      }
-   cout << "   8 7 6 5 4 3 2 1" << endl;
+   cout << "   7 6 5 4 3 2 1 0" << endl;
  }
    

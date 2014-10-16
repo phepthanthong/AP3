@@ -1,7 +1,8 @@
 #include "Joueur.h"
+
 int Joueur::comp = 0;
 Joueur::Joueur(){
-  cout << "Constructeur par defaut: Joueur" << endl;
+  //cout << "Constructeur par defaut: Joueur" << endl;
   /*
   if (comp = 0)
     {
@@ -64,7 +65,7 @@ Joueur::Joueur(){
 }
   
 Joueur::~Joueur(){
-  cout << "Destructeur: Joueur" << endl;
+  //cout << "Destructeur: Joueur" << endl;
 }
 
 Joueur::Joueur(string nom, bool estBlanc){
