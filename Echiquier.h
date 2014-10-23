@@ -62,7 +62,7 @@ public:
    * (case occupee, coordonnees invalides, piece vide, piece pas
    * presente au bon endroit sur l'echiquier)
    */
-  bool deplacer( Piece* p, int x, int y );
+  bool deplacer( Echiquier &e, Piece* p, int x, int y );
 
   /**
    * Enleve la piece situee sur une case (qui devient vide).

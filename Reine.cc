@@ -9,5 +9,5 @@ Reine::~Reine(){
 }
 
 bool Reine::mouvementValide(Echiquier &e, int x, int y){
-
+  return ( Tour::mouvementValide(e,x,y) || Fou::mouvementValide(e,x,y);
 }

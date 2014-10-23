@@ -21,6 +21,7 @@ class Piece {
 
   void setX(int x);
   void setY(int y);
+  void setPosition(int x, int y);
   void setNom(string str);
   int getX();
   int getY();

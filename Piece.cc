@@ -24,6 +24,8 @@ void Piece::setX(int x){  _x = x; }
 
 void Piece::setY(int y){  _y = y; }
 
+void Piece::setPosition(int x, int y){ _x = x; _y = y;}
+
 int Piece::getX(){  return _x;}
 
 int Piece::getY(){  return _y;}

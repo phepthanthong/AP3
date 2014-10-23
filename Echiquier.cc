@@ -82,13 +82,14 @@ bool Echiquier::placer( Piece* p )
  * (case occupee, coordonnees invalides, piece vide, piece pas
  * presente au bon endroit sur l'echiquier)
  */
-bool Echiquier::deplacer( Piece* p, int x, int y )
+bool Echiquier::deplacer(Echiquier &e, Piece* p, int x, int y )
 {
   return( (getPiece(x,y) == 0) 
 	  && (x>=0) && (x<8)
 	  && (y>=0) && (y<8)
 	  && (p->getNom() !="")
 	  && p->bonEndroit()
+	  && p->mouvementValide(e,x,y);
 	  );
 }
 
